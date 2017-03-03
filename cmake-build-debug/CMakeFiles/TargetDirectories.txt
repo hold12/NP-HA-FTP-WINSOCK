@@ -1,0 +1,3 @@
+C:/Users/tjc/CLionProjects/NP-HA-FTP/cmake-build-debug/CMakeFiles/NP_HA_FTP.dir
+C:/Users/tjc/CLionProjects/NP-HA-FTP/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/tjc/CLionProjects/NP-HA-FTP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
