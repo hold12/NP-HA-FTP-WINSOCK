@@ -38,19 +38,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\tjc\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe
+CMAKE_COMMAND = C:\Users\freya\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe
 
 # The command to remove a file.
-RM = C:\Users\tjc\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe -E remove -f
+RM = C:\Users\freya\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\tjc\CLionProjects\NP-HA-FTP
+CMAKE_SOURCE_DIR = C:\Users\freya\Dropbox\DTU\NP-HA-FTP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\tjc\CLionProjects\NP-HA-FTP\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\freya\Dropbox\DTU\NP-HA-FTP\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = C:\Users\tjc\CLionProjects\NP-HA-FTP\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	C:\Users\tjc\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe -E echo "No interactive CMake dialog available."
+	C:\Users\freya\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	C:\Users\tjc\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	C:\Users\freya\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\tjc\CLionProjects\NP-HA-FTP\cmake-build-debug\CMakeFiles C:\Users\tjc\CLionProjects\NP-HA-FTP\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\freya\Dropbox\DTU\NP-HA-FTP\cmake-build-debug\CMakeFiles C:\Users\freya\Dropbox\DTU\NP-HA-FTP\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\tjc\CLionProjects\NP-HA-FTP\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\freya\Dropbox\DTU\NP-HA-FTP\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,32 +122,32 @@ NP_HA_FTP/fast:
 	$(MAKE) -f CMakeFiles\NP_HA_FTP.dir\build.make CMakeFiles/NP_HA_FTP.dir/build
 .PHONY : NP_HA_FTP/fast
 
-main.obj: main.cpp.obj
+src/client.obj: src/client.cpp.obj
 
-.PHONY : main.obj
+.PHONY : src/client.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\NP_HA_FTP.dir\build.make CMakeFiles/NP_HA_FTP.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+src/client.cpp.obj:
+	$(MAKE) -f CMakeFiles\NP_HA_FTP.dir\build.make CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj
+.PHONY : src/client.cpp.obj
 
-main.i: main.cpp.i
+src/client.i: src/client.cpp.i
 
-.PHONY : main.i
+.PHONY : src/client.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\NP_HA_FTP.dir\build.make CMakeFiles/NP_HA_FTP.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/client.cpp.i:
+	$(MAKE) -f CMakeFiles\NP_HA_FTP.dir\build.make CMakeFiles/NP_HA_FTP.dir/src/client.cpp.i
+.PHONY : src/client.cpp.i
 
-main.s: main.cpp.s
+src/client.s: src/client.cpp.s
 
-.PHONY : main.s
+.PHONY : src/client.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\NP_HA_FTP.dir\build.make CMakeFiles/NP_HA_FTP.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/client.cpp.s:
+	$(MAKE) -f CMakeFiles\NP_HA_FTP.dir\build.make CMakeFiles/NP_HA_FTP.dir/src/client.cpp.s
+.PHONY : src/client.cpp.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... NP_HA_FTP
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... src/client.obj
+	@echo ... src/client.i
+	@echo ... src/client.s
 .PHONY : help
 
 

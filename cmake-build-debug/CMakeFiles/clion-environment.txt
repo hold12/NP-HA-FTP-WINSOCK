@@ -1,2 +1,2 @@
 ToolSet: w64 5.0@C:\Program Files\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1\mingw64
-CMake: 3.6.3@C:\Users\tjc\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe
+CMake: 3.6.3@C:\Users\freya\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe

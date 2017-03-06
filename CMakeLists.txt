@@ -3,5 +3,5 @@ project(NP_HA_FTP)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES src/main.cpp)
+set(SOURCE_FILES src/client.cpp)
 add_executable(NP_HA_FTP ${SOURCE_FILES})

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/freya/Dropbox/DTU/NP-HA-FTP/src/Client.h
+winsock2.h
+-
+
+C:/Users/freya/Dropbox/DTU/NP-HA-FTP/src/client.cpp
+iostream
+-
+winsock2.h
+-
+Client.h
+C:/Users/freya/Dropbox/DTU/NP-HA-FTP/src/Client.h
+

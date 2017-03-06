@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\tjc\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe
+CMAKE_COMMAND = C:\Users\freya\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe
 
 # The command to remove a file.
-RM = C:\Users\tjc\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe -E remove -f
+RM = C:\Users\freya\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\tjc\CLionProjects\NP-HA-FTP
+CMAKE_SOURCE_DIR = C:\Users\freya\Dropbox\DTU\NP-HA-FTP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\tjc\CLionProjects\NP-HA-FTP\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\freya\Dropbox\DTU\NP-HA-FTP\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/NP_HA_FTP.dir/depend.make
@@ -56,43 +56,43 @@ include CMakeFiles/NP_HA_FTP.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/NP_HA_FTP.dir/flags.make
 
-CMakeFiles/NP_HA_FTP.dir/main.cpp.obj: CMakeFiles/NP_HA_FTP.dir/flags.make
-CMakeFiles/NP_HA_FTP.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tjc\CLionProjects\NP-HA-FTP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NP_HA_FTP.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NP_HA_FTP.dir\main.cpp.obj -c C:\Users\tjc\CLionProjects\NP-HA-FTP\main.cpp
+CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj: CMakeFiles/NP_HA_FTP.dir/flags.make
+CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj: ../src/client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\freya\Dropbox\DTU\NP-HA-FTP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NP_HA_FTP.dir\src\client.cpp.obj -c C:\Users\freya\Dropbox\DTU\NP-HA-FTP\src\client.cpp
 
-CMakeFiles/NP_HA_FTP.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NP_HA_FTP.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tjc\CLionProjects\NP-HA-FTP\main.cpp > CMakeFiles\NP_HA_FTP.dir\main.cpp.i
+CMakeFiles/NP_HA_FTP.dir/src/client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NP_HA_FTP.dir/src/client.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\freya\Dropbox\DTU\NP-HA-FTP\src\client.cpp > CMakeFiles\NP_HA_FTP.dir\src\client.cpp.i
 
-CMakeFiles/NP_HA_FTP.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NP_HA_FTP.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tjc\CLionProjects\NP-HA-FTP\main.cpp -o CMakeFiles\NP_HA_FTP.dir\main.cpp.s
+CMakeFiles/NP_HA_FTP.dir/src/client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NP_HA_FTP.dir/src/client.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\freya\Dropbox\DTU\NP-HA-FTP\src\client.cpp -o CMakeFiles\NP_HA_FTP.dir\src\client.cpp.s
 
-CMakeFiles/NP_HA_FTP.dir/main.cpp.obj.requires:
+CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj.requires:
 
-.PHONY : CMakeFiles/NP_HA_FTP.dir/main.cpp.obj.requires
+.PHONY : CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj.requires
 
-CMakeFiles/NP_HA_FTP.dir/main.cpp.obj.provides: CMakeFiles/NP_HA_FTP.dir/main.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\NP_HA_FTP.dir\build.make CMakeFiles/NP_HA_FTP.dir/main.cpp.obj.provides.build
-.PHONY : CMakeFiles/NP_HA_FTP.dir/main.cpp.obj.provides
+CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj.provides: CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\NP_HA_FTP.dir\build.make CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj.provides.build
+.PHONY : CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj.provides
 
-CMakeFiles/NP_HA_FTP.dir/main.cpp.obj.provides.build: CMakeFiles/NP_HA_FTP.dir/main.cpp.obj
+CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj.provides.build: CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj
 
 
 # Object files for target NP_HA_FTP
 NP_HA_FTP_OBJECTS = \
-"CMakeFiles/NP_HA_FTP.dir/main.cpp.obj"
+"CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj"
 
 # External object files for target NP_HA_FTP
 NP_HA_FTP_EXTERNAL_OBJECTS =
 
-NP_HA_FTP.exe: CMakeFiles/NP_HA_FTP.dir/main.cpp.obj
+NP_HA_FTP.exe: CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj
 NP_HA_FTP.exe: CMakeFiles/NP_HA_FTP.dir/build.make
 NP_HA_FTP.exe: CMakeFiles/NP_HA_FTP.dir/linklibs.rsp
 NP_HA_FTP.exe: CMakeFiles/NP_HA_FTP.dir/objects1.rsp
 NP_HA_FTP.exe: CMakeFiles/NP_HA_FTP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\tjc\CLionProjects\NP-HA-FTP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable NP_HA_FTP.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\freya\Dropbox\DTU\NP-HA-FTP\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable NP_HA_FTP.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\NP_HA_FTP.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,7 +100,7 @@ CMakeFiles/NP_HA_FTP.dir/build: NP_HA_FTP.exe
 
 .PHONY : CMakeFiles/NP_HA_FTP.dir/build
 
-CMakeFiles/NP_HA_FTP.dir/requires: CMakeFiles/NP_HA_FTP.dir/main.cpp.obj.requires
+CMakeFiles/NP_HA_FTP.dir/requires: CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj.requires
 
 .PHONY : CMakeFiles/NP_HA_FTP.dir/requires
 
@@ -109,6 +109,6 @@ CMakeFiles/NP_HA_FTP.dir/clean:
 .PHONY : CMakeFiles/NP_HA_FTP.dir/clean
 
 CMakeFiles/NP_HA_FTP.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\tjc\CLionProjects\NP-HA-FTP C:\Users\tjc\CLionProjects\NP-HA-FTP C:\Users\tjc\CLionProjects\NP-HA-FTP\cmake-build-debug C:\Users\tjc\CLionProjects\NP-HA-FTP\cmake-build-debug C:\Users\tjc\CLionProjects\NP-HA-FTP\cmake-build-debug\CMakeFiles\NP_HA_FTP.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\freya\Dropbox\DTU\NP-HA-FTP C:\Users\freya\Dropbox\DTU\NP-HA-FTP C:\Users\freya\Dropbox\DTU\NP-HA-FTP\cmake-build-debug C:\Users\freya\Dropbox\DTU\NP-HA-FTP\cmake-build-debug C:\Users\freya\Dropbox\DTU\NP-HA-FTP\cmake-build-debug\CMakeFiles\NP_HA_FTP.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/NP_HA_FTP.dir/depend
 

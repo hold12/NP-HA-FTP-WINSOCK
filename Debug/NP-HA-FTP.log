@@ -1,0 +1,5 @@
+﻿  client.cpp
+src\client.cpp(24): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(1850): note: see declaration of 'inet_addr'
+  NP-HA-FTP.vcxproj -> C:\Users\freya\Dropbox\DTU\NP-HA-FTP\Debug\NP-HA-FTP.exe
+  NP-HA-FTP.vcxproj -> C:\Users\freya\Dropbox\DTU\NP-HA-FTP\Debug\NP-HA-FTP.pdb (Full PDB)

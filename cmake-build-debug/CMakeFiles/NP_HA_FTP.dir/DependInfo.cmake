@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/tjc/CLionProjects/NP-HA-FTP/main.cpp" "C:/Users/tjc/CLionProjects/NP-HA-FTP/cmake-build-debug/CMakeFiles/NP_HA_FTP.dir/main.cpp.obj"
+  "C:/Users/freya/Dropbox/DTU/NP-HA-FTP/src/client.cpp" "C:/Users/freya/Dropbox/DTU/NP-HA-FTP/cmake-build-debug/CMakeFiles/NP_HA_FTP.dir/src/client.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
