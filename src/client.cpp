@@ -4,7 +4,7 @@ using namespace std;
 
 #include <winsock2.h>
 #include "Client.h"
-#pragma comment(lib, "Ws2_32.lib")
+#pragma comment(lib, "Ws2_32.lib") //Winsock Library
 
 int main() {
 	Client c;
