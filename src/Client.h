@@ -6,7 +6,8 @@
 class Client{
 public:
  void Connect(int port, char *adr);
- void SendMsg(char *pmsg);
+ void SendMsg(char *pmsg, int size);
+ char* RecvMsg();
  void CloseCon();
 private:
  int fd;

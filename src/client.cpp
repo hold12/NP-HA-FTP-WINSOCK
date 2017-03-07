@@ -8,16 +8,21 @@ using namespace std;
 #include "Ws2tcpip.h"
 #pragma comment(lib, "Ws2_32.lib") //Winsock Library
 
-int main() {
+int main() { 
 	Client c;
 	c.Connect(21, "130.226.195.126");
 	Sleep(1000);
-	c.SendMsg("USER anonymous\r\n");
+	c.SendMsg("HELLO\r\n",7);
 	Sleep(1000);
-	c.SendMsg("PASS bhupjit@dtu.dk\r\n");
+	c.SendMsg("USER anonymous\r\n", 16);
 	Sleep(1000);
-	c.SendMsg("PASV\r\n");
+	c.SendMsg("PASS s165232@dtu.dk\r\n", 21);
+	Sleep(1000);
+	c.SendMsg("PASV\r\n", 6);
+	Sleep(1000);
+	cout << c.RecvMsg() << endl;
 	c.CloseCon();
+	Sleep(36000);
     return 0;
 }
 
@@ -36,14 +41,23 @@ void Client::Connect(int port, char *adr) {
 	cout << "Connect ended" << endl;
 }
 
-void Client::SendMsg(char *pmsg) {
+void Client::SendMsg(char *pmsg, int size) {
 	cout << "SendMsg started" << endl;
 	
-	if ((nOk = send(fd, pmsg, 100, 0)) == -1) {
+	if ((nOk = send(fd, pmsg, size, 0)) == -1) {
         cout << "Kunne ikke sende!" << endl;
-		cin.get();
         exit(1);
     }
+
+	cout << "SendMsg ended" << endl;
+}
+
+char* Client::RecvMsg() {
+	cout << "SendMsg started" << endl;
+
+	char *received = "a";
+	recv(fd, received, 100, 0);
+	return received;
 
 	cout << "SendMsg ended" << endl;
 }
