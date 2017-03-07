@@ -5,6 +5,7 @@ using namespace std;
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
 #include <winsock2.h>
 #include "Client.h"
+#include "Ws2tcpip.h"
 #pragma comment(lib, "Ws2_32.lib") //Winsock Library
 
 int main() {
