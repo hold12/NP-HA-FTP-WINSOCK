@@ -45,6 +45,8 @@ int main() {
 	c.SendMsg("CWD /pub/62501/HOWTOs/NAT-HOWTO\r\n", 33);//bigger file of 1359 bytes
 	c.RecvMsg();
 	c.SendMsg("RETR NAT-HOWTO-3.html\r\n", 23);
+	c.RecvMsg();
+	c.RecvMsg();
 	data.SaveFile("NAT-HOWTO-3.html");
 	cin.get();
 	c.CloseCon();
