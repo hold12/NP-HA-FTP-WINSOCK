@@ -9,7 +9,7 @@ public:
 	void SaveFile(char filename[]);
 	void CloseCon();
 private:
-	int fd;
+	int sock;
 	sockaddr_in saddr;
 	WSADATA wlib;
 };

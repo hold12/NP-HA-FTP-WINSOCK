@@ -14,25 +14,25 @@ using namespace std;
 
 void FTPClient::Connect(int port, char *adr) {
 	WSAStartup(0x0101, &wlib);
-	fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	SOCKADDR_IN saddr;
 	saddr.sin_family = AF_INET;
 	saddr.sin_port = htons(port);
 	inet_pton(AF_INET, adr, &saddr.sin_addr.s_addr);
-	if (connect(fd, (SOCKADDR*)(&saddr), sizeof(saddr)) != 0) {
+	if (connect(sock, (SOCKADDR*)(&saddr), sizeof(saddr)) != 0) {
 		cout << "No connection established." << endl;
 		exit(1);
 	}
 	cout << "\nConnected to server on IP " << adr << " and port " << port << "." << endl;
 }
 
-void FTPClient::SendMsg(char *pmsg, int size) {
-	if (send(fd, pmsg, size, 0) == -1) {
+void FTPClient::SendMsg(char msg[], int size) {
+	if (send(sock, msg, size, 0) == -1) {
 		cout << "Could not send message to server." << endl;
 		exit(1);
 	}
 	cout << "Sent to server:\t\t";
-	cout << pmsg;
+	cout << msg;
 }
 
 char* FTPClient::RecvMsg() {
@@ -40,7 +40,7 @@ char* FTPClient::RecvMsg() {
 
 	int x;
 	char received[1024];
-	x = recv(fd, received, 1024, 0); //recv() returns length of message
+	x = recv(sock, received, 1024, 0); //recv() returns length of message
 	received[x] = '\0'; //0 indexing
 	cout << received;
 	return received;
@@ -51,8 +51,8 @@ void FTPClient::SaveFile(char filename[]) {
 	file.open(filename);
 	char buffer[1];
 	int bytes(0);
-	cout << "/*****FILE CONTENT******************************************************************************/" << endl;
-	while (recv(fd, buffer, sizeof(buffer), 0)) {
+	cout << "/*****FIRST 1 KB OF FILE**********************************************************************/" << endl;
+	while (recv(sock, buffer, sizeof(buffer), 0)) {
 		if (bytes <= 1024)
 			cout << buffer[0];
 		file << buffer[0];
@@ -63,7 +63,7 @@ void FTPClient::SaveFile(char filename[]) {
 }
 
 void FTPClient::CloseCon() {
-	closesocket(fd);
+	closesocket(sock);
 	WSACleanup();
 	cout << "Closed connection." << endl;
 }
