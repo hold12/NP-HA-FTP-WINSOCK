@@ -8,26 +8,24 @@ using namespace std;
 #include "Ws2tcpip.h"
 #pragma comment(lib, "Ws2_32.lib") //Winsock Library
 
-int main() { 
+int main() {
 	Client c;
 	c.Connect(21, "130.226.195.126");
-	Sleep(1000);
-	c.SendMsg("HELLO\r\n",7);
-	Sleep(1000);
-	c.SendMsg("USER anonymous\r\n", 16);
-	Sleep(1000);
-	c.SendMsg("PASS s165232@dtu.dk\r\n", 21);
-	Sleep(1000);
-	c.SendMsg("PASV\r\n", 6);
-	Sleep(1000);
 	cout << c.RecvMsg() << endl;
-	c.CloseCon();
+	c.SendMsg("HELLO\r\n",7);
+	cout << c.RecvMsg() << endl;
+	c.SendMsg("USER anonymous\r\n", 16);
+	cout << c.RecvMsg() << endl;
+	c.SendMsg("PASS s165232@dtu.dk\r\n", 21);
+	cout << c.RecvMsg() << endl;
+	c.SendMsg("PASV\r\n", 6);
+	cout << c.RecvMsg() << endl;
 	Sleep(36000);
+	c.CloseCon();
     return 0;
 }
 
 void Client::Connect(int port, char *adr) {
-	cout << "Connect started" << endl;
 	WSAStartup(0x0101, &wlib);
 	fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	SOCKADDR_IN saddr;
@@ -36,35 +34,33 @@ void Client::Connect(int port, char *adr) {
 	inet_pton(AF_INET, adr, &saddr.sin_addr.s_addr);
 	if (connect(fd, (SOCKADDR*)(&saddr), sizeof(saddr)) != 0) {
 		cout << "No connection established." << endl;
-		cin.get();
+		exit(1);
 	}
-	cout << "Connect ended" << endl;
+	cout << "Connected to server." << endl;
 }
 
 void Client::SendMsg(char *pmsg, int size) {
-	cout << "SendMsg started" << endl;
+	cout << "Sent to server:" << endl;
+	cout << pmsg << endl;
 	
 	if ((nOk = send(fd, pmsg, size, 0)) == -1) {
         cout << "Kunne ikke sende!" << endl;
         exit(1);
     }
-
-	cout << "SendMsg ended" << endl;
 }
 
 char* Client::RecvMsg() {
-	cout << "SendMsg started" << endl;
+	cout << "Received from server:" << endl;
 
-	char *received = "a";
-	recv(fd, received, 100, 0);
-	return received;
-
-	cout << "SendMsg ended" << endl;
+	int x;
+	char received[1024];
+	x = recv(fd, received, 1024, 0);
+	received[x] = '\0'; //0 indexing 
+ 	return received;
 }
 
 void Client::CloseCon() {
-	cout << "CloseCon started" << endl;
     closesocket(fd);
     WSACleanup();
-	cout << "CloseCon ended" << endl;
+	cout << "Closed connection." << endl;
 }
