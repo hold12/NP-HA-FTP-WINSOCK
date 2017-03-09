@@ -8,6 +8,7 @@ public:
  void Connect(int port, char *adr);
  void SendMsg(char *pmsg, int size);
  char* RecvMsg();
+ void SaveFile(char filename[]);
  void CloseCon();
 private:
  int fd;
