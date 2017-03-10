@@ -6,7 +6,7 @@ using namespace std;
 int main() {
 	char ip[] = "130.226.195.126";
 	char *ip_pointer = ip; //Casting ip-address to a char-pointer
-	FTPClient c;
+	FTPClient c, data;
 
 	//Establishing connection
 	c.Connect(21, ip_pointer);
@@ -19,7 +19,7 @@ int main() {
 	c.RecvMsg();
 	c.SendMsg("PASS s165232@dtu.dk\r\n", 21);
 	c.RecvMsg();
-
+	
 	//Entering Passive Mode
 	c.SendMsg("PASV\r\n", 6);
 	int a1, a2, a3, a4, p1, p2;
@@ -27,7 +27,6 @@ int main() {
 	int dataPort = (p1 * 256) + p2;
 
 	//Opening data connection for 1st file
-	FTPClient data;
 	data.Connect(dataPort, ip_pointer);
 	c.SendMsg("RETR file.txt\r\n", 15); //small file of 12 bytes
 	c.RecvMsg();
@@ -42,12 +41,25 @@ int main() {
 
 	//Opening new data connection for 2nd file
 	data.Connect(dataPort, ip_pointer);
-	c.SendMsg("CWD /pub/62501/HOWTOs/NAT-HOWTO\r\n", 33);//bigger file of 1359 bytes
+	c.SendMsg("CWD /pub/62501/HOWTOs/NAT-HOWTO\r\n", 33);
 	c.RecvMsg();
-	c.SendMsg("RETR NAT-HOWTO-3.html\r\n", 23);
+	c.SendMsg("RETR NAT-HOWTO-3.html\r\n", 23);//bigger file of 1359 bytes
 	c.RecvMsg();
 	c.RecvMsg();
 	data.SaveFile("NAT-HOWTO-3.html");
+	data.CloseCon();
+	
+	//Entering Passive Mode again
+	c.SendMsg("PASV\r\n", 6);
+	sscanf_s(c.RecvMsg(), "227 Entering Passive Mode (%d,%d,%d,%d,%d,%d).\r\n", &a1, &a2, &a3, &a4, &p1, &p2);
+	dataPort = (p1 * 256) + p2;
+
+	//Opening new data connection to upload file
+	data.Connect(dataPort, ip_pointer);
+	c.SendMsg("STOR CMakeLists.txt\r\n", 23);
+	c.RecvMsg();
+	data.CloseCon();
+
 	cin.get();
 	c.CloseCon();
 	return 0;
