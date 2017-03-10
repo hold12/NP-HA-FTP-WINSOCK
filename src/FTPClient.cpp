@@ -52,7 +52,7 @@ void FTPClient::SaveFile(char filename[]) {
 	int bytes(0);
 	cout << "/*****FIRST 1 KB OF FILE**********************************************************************/" << endl;
 	while (recv(sock, buffer, sizeof(buffer), 0)) {
-		if (bytes <= 1024)
+		if (bytes < 1024)
 			cout << buffer[0];
 		file << buffer[0];
 		bytes++;
