@@ -77,8 +77,8 @@ int main() {
 	c.RecvMsg();
 	c.SendMsg("LIST\r\n", 6);
 	c.RecvMsg();
-	data.RecvMsg();
 	c.RecvMsg();
+	data.RecvMsg();
 	c.SendMsg("STOR CMakeLists.txt\r\n", 21);
 	c.RecvMsg();
 	data.CloseCon();
