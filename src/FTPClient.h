@@ -1,3 +1,6 @@
+/*
+FTPClient.h
+*/
 #pragma once
 #include <winsock2.h>
 class FTPClient
@@ -13,4 +16,3 @@ private:
 	sockaddr_in saddr;
 	WSADATA wlib;
 };
-
