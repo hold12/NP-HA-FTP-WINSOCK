@@ -65,5 +65,5 @@ void FTPClient::SaveFile(char filename[]) {
 void FTPClient::CloseCon() {
 	closesocket(sock);
 	WSACleanup();
-	cout << "Closed connection." << endl;
+	cout << "Closed connection.\n" << endl;
 }
