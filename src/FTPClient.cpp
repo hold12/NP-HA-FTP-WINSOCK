@@ -18,7 +18,6 @@ using namespace std;
 void FTPClient::Connect(int port, char *adr) {
 	WSAStartup(0x0101, &wlib);
 	sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-	SOCKADDR_IN saddr;
 	saddr.sin_family = AF_INET;
 	saddr.sin_port = htons(port);
 	inet_pton(AF_INET, adr, &saddr.sin_addr.s_addr);
