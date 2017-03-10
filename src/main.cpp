@@ -59,7 +59,7 @@ int main() {
 
 	//Opening new data connection to upload file
 	data.Connect(dataPort, ip_pointer);
-	c.SendMsg("STOR CMakeLists.txt\r\n", 23);
+	c.SendMsg("STOR CMakeLists.txt\r\n", 21);
 	c.RecvMsg();
 	data.CloseCon();
 
